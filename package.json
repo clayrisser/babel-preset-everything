@@ -1,0 +1,27 @@
+{
+  "name": "babel-preset-everything",
+  "version": "0.0.1",
+  "description": "all official proposed plugins for babel 7",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codejamninja/babel-preset-everything.git"
+  },
+  "keywords": [
+    "babel",
+    "preset",
+    "es6",
+    "babel7",
+    "plugin",
+    "proposed"
+  ],
+  "author": "Jam Risser <jam@codejam.ninja> (https://codejam.ninja)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codejamninja/babel-preset-everything/issues"
+  },
+  "homepage": "https://github.com/codejamninja/babel-preset-everything#readme"
+}
