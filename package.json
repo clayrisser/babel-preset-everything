@@ -4,7 +4,12 @@
   "description": "all official proposed plugins for babel 7",
   "main": "lib/index.js",
   "scripts": {
-    "build": "babel src -d lib"
+    "build": "npm run format && npm run test && babel src -d lib",
+    "format": "prettier --write ./src/**/*.js",
+    "lint": "eslint ./",
+    "lint:fix": "eslint --fix ./",
+    "prepublish": "npm run build",
+    "test": "npm run lint"
   },
   "repository": {
     "type": "git",
@@ -27,7 +32,12 @@
   "devDependencies": {
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",
-    "@babel/preset-env": "^7.0.0"
+    "@babel/preset-env": "^7.0.0",
+    "babel-eslint": "^9.0.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-plugin-import": "^2.14.0",
+    "prettier": "^1.14.2"
   },
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.0.0",
@@ -44,6 +54,10 @@
     "@babel/plugin-proposal-pipeline-operator": "^7.0.0",
     "@babel/plugin-proposal-throw-expressions": "^7.0.0",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
-    "@babel/plugin-syntax-import-meta": "^7.0.0"
-  }
+    "@babel/plugin-syntax-import-meta": "^7.0.0",
+    "eslint": "^5.5.0"
+  },
+  "eslintIgnore": [
+    "lib"
+  ]
 }
