@@ -1,14 +1,15 @@
 {
   "name": "babel-preset-everything",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "all official proposed plugins for babel 7",
   "main": "lib/index.js",
   "scripts": {
-    "build": "npm run format && npm run test && babel src -d lib",
+    "build": "npm run test && babel src -d lib",
+    "clean": "rimraf lib",
     "format": "prettier --write ./src/**/*.js",
-    "lint": "eslint ./",
-    "lint:fix": "eslint --fix ./",
-    "prepublish": "npm run build",
+    "lint": "npm run format && eslint ./",
+    "lint:fix": "npm run format && eslint --fix ./",
+    "prepublish": "npm run clean && npm run build",
     "test": "npm run lint"
   },
   "repository": {
@@ -38,11 +39,13 @@
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^3.0.1",
     "eslint-plugin-import": "^2.14.0",
-    "prettier": "^1.14.2"
+    "prettier": "^1.14.2",
+    "rimraf": "^2.6.2"
   },
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.0.0",
     "@babel/plugin-proposal-decorators": "^7.0.0",
+    "@babel/plugin-proposal-do-expressions": "^7.0.0",
     "@babel/plugin-proposal-export-default-from": "^7.0.0",
     "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
     "@babel/plugin-proposal-function-bind": "^7.0.0",
