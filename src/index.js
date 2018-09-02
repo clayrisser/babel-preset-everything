@@ -16,8 +16,7 @@ export default function() {
       [
         '@babel/plugin-proposal-decorators',
         {
-          legacy: true,
-          decoratorsBeforeExport: true
+          legacy: true
         }
       ],
       '@babel/plugin-proposal-function-sent',
@@ -28,7 +27,7 @@ export default function() {
       // Stage 3
       '@babel/plugin-syntax-dynamic-import',
       '@babel/plugin-syntax-import-meta',
-      ['@babel/plugin-proposal-class-properties', { loose: false }],
+      ['@babel/plugin-proposal-class-properties', { loose: true }],
       '@babel/plugin-proposal-json-strings'
     ]
   };
