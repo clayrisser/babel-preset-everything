@@ -22,8 +22,8 @@ export default function() {
 
       // Stage 3
       '@babel/plugin-syntax-dynamic-import',
-      '@babel/plugin-transform-modern-regexp',
       'babel-plugin-transform-dotall-regex',
+      'babel-plugin-transform-modern-regexp',
       'babel-plugin-transform-unicode-property-regex',
       ['@babel/plugin-proposal-class-properties', { loose: true }]
     ]
