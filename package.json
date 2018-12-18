@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-everything",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "all official proposed plugins for babel 7",
   "main": "lib/index.js",
   "scripts": {
@@ -32,10 +32,10 @@
   "homepage": "https://github.com/codejamninja/babel-preset-everything#readme",
   "devDependencies": {
     "@babel/cli": "^7.2.0",
-    "@babel/core": "^7.2.0",
+    "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.0",
     "babel-eslint": "^10.0.1",
-    "eslint": "^5.9.0",
+    "eslint": "^5.10.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^3.3.0",
     "eslint-plugin-import": "^2.14.0",
@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.2.1",
-    "@babel/plugin-proposal-decorators": "^7.2.0",
+    "@babel/plugin-proposal-decorators": "^7.2.2",
     "@babel/plugin-proposal-do-expressions": "^7.2.0",
     "@babel/plugin-proposal-function-bind": "^7.2.0",
     "@babel/plugin-proposal-function-sent": "^7.2.0",
@@ -53,9 +53,10 @@
     "@babel/plugin-transform-dotall-regex": "^7.2.0",
     "babel-plugin-transform-dotall-regex": "^1.0.1",
     "babel-plugin-transform-export-extensions": "^6.22.0",
-    "babel-plugin-transform-modern-regexp": "^0.0.6",
+    "babel-plugin-transform-modern-regexp": "0.0.6",
     "babel-plugin-transform-numeric-separator": "^7.0.0-alpha.11",
-    "babel-plugin-transform-unicode-property-regex": "^2.0.5"
+    "babel-plugin-transform-unicode-property-regex": "^2.0.5",
+    "pkg-dir": "^3.0.0"
   },
   "eslintIgnore": [
     "lib"

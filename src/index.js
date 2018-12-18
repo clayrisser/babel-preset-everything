@@ -1,31 +1,44 @@
+import path from 'path';
+import pkgDir from 'pkg-dir';
+
 export default function() {
   return {
     plugins: [
       // Stage 0
-      '@babel/plugin-proposal-function-bind',
+      resolve('@babel/plugin-proposal-function-bind'),
 
       // Stage 1
-      '@babel/plugin-proposal-do-expressions',
-      'babel-plugin-transform-export-extensions',
-      'babel-plugin-transform-numeric-separator',
-      ['@babel/plugin-proposal-optional-chaining', { loose: false }],
+      resolve('@babel/plugin-proposal-do-expressions'),
+      resolve('babel-plugin-transform-export-extensions'),
+      resolve('babel-plugin-transform-numeric-separator'),
+      [resolve('@babel/plugin-proposal-optional-chaining'), { loose: false }],
 
       // Stage 2
-      '@babel/plugin-proposal-function-sent',
-      '@babel/plugin-syntax-import-meta',
+      resolve('@babel/plugin-proposal-function-sent'),
+      resolve('@babel/plugin-syntax-import-meta'),
       [
-        '@babel/plugin-proposal-decorators',
+        resolve('@babel/plugin-proposal-decorators'),
         {
           legacy: true
         }
       ],
 
       // Stage 3
-      '@babel/plugin-syntax-dynamic-import',
-      'babel-plugin-transform-dotall-regex',
-      'babel-plugin-transform-modern-regexp',
-      'babel-plugin-transform-unicode-property-regex',
-      ['@babel/plugin-proposal-class-properties', { loose: true }]
+      resolve('@babel/plugin-syntax-dynamic-import'),
+      resolve('babel-plugin-transform-dotall-regex'),
+      resolve('babel-plugin-transform-modern-regexp'),
+      resolve('babel-plugin-transform-unicode-property-regex'),
+      [resolve('@babel/plugin-proposal-class-properties'), { loose: true }]
     ]
   };
+}
+
+function resolve(packageName, dirname = __dirname, paths = []) {
+  return require.resolve(packageName, {
+    paths: [
+      path.resolve(pkgDir.sync(process.cwd()), 'node_modules'),
+      path.resolve(pkgDir.sync(dirname), 'node_modules'),
+      ...paths
+    ]
+  });
 }
