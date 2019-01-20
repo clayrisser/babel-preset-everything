@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-everything",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "all official proposed plugins for babel 7",
   "main": "lib/index.js",
   "scripts": {
@@ -54,7 +54,7 @@
     "babel-plugin-transform-dotall-regex": "^1.0.1",
     "babel-plugin-transform-export-extensions": "^6.22.0",
     "babel-plugin-transform-modern-regexp": "0.0.6",
-    "babel-plugin-transform-numeric-separator": "7.0.0-alpha.3",
+    "babel-plugin-transform-numeric-separator": "~7.0.0-beta.3",
     "babel-plugin-transform-unicode-property-regex": "^2.0.5",
     "pkg-dir": "^3.0.0"
   },
