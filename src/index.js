@@ -24,9 +24,9 @@ export default function() {
       ],
 
       // Stage 3
+      resolve('@babel/plugin-proposal-unicode-property-regex'),
       resolve('@babel/plugin-syntax-dynamic-import'),
       resolve('@babel/plugin-transform-dotall-regex'),
-      resolve('@babel/plugin-transform-unicode-property-regex'),
       resolve('babel-plugin-transform-modern-regexp'),
       [resolve('@babel/plugin-proposal-class-properties'), { loose: true }]
     ]
