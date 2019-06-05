@@ -9,8 +9,8 @@ export default function() {
 
       // Stage 1
       resolve('@babel/plugin-proposal-do-expressions'),
-      resolve('babel-plugin-transform-export-extensions'),
-      resolve('babel-plugin-transform-numeric-separator'),
+      resolve('@babel/plugin-syntax-export-extensions'),
+      resolve('@babel/plugin-proposal-numeric-separator'),
       [resolve('@babel/plugin-proposal-optional-chaining'), { loose: false }],
 
       // Stage 2
@@ -25,9 +25,9 @@ export default function() {
 
       // Stage 3
       resolve('@babel/plugin-syntax-dynamic-import'),
-      resolve('babel-plugin-transform-dotall-regex'),
+      resolve('@babel/plugin-transform-dotall-regex'),
+      resolve('@babel/plugin-transform-unicode-property-regex'),
       resolve('babel-plugin-transform-modern-regexp'),
-      resolve('babel-plugin-transform-unicode-property-regex'),
       [resolve('@babel/plugin-proposal-class-properties'), { loose: true }]
     ]
   };
