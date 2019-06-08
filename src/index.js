@@ -28,7 +28,10 @@ export default function() {
       resolve('@babel/plugin-syntax-dynamic-import'),
       resolve('@babel/plugin-transform-dotall-regex'),
       resolve('babel-plugin-transform-modern-regexp'),
-      [resolve('@babel/plugin-proposal-class-properties'), { loose: true }]
+      [resolve('@babel/plugin-proposal-class-properties'), { loose: true }],
+
+      // Stage 4
+      resolve('@babel/plugin-transform-runtime')
     ]
   };
 }
