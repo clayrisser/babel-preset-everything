@@ -1,7 +1,8 @@
 import path from 'path';
 import pkgDir from 'pkg-dir';
+import { declare } from '@babel/helper-plugin-utils';
 
-export default function() {
+export default declare(() => {
   return {
     plugins: [
       // Stage 0
@@ -34,7 +35,7 @@ export default function() {
       resolve('@babel/plugin-transform-runtime')
     ]
   };
-}
+});
 
 function resolve(packageName, dirname = __dirname, paths = []) {
   return require.resolve(packageName, {
